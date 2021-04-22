@@ -1,6 +1,8 @@
 package serializzazione;
 
-public class Studente {
+import java.io.Serializable;
+
+public class Studente implements Serializable {
     private String nome;
     private String cognome;
     private Integer numeroRegistro;
@@ -9,5 +11,10 @@ public class Studente {
         this.nome = nome;
         this.cognome = cognome;
         this.numeroRegistro = numeroRegistro;
+    }
+    
+    @Override
+    public String toString() {
+        return "Studente: "+numeroRegistro+", Nome: "+nome+", Cognome: "+cognome+";";
     }
 }
